@@ -1,0 +1,97 @@
+[zh-cn]
+name = "文档文字识别"
+auth = "shh"
+descript = "把 TNAS 上的文档转成可检索文本。对 PDF 直接读取文件结构——交叉引用表、页内容流、FlateDecode 解压、文本显示操作符与 ToUnicode 字符映射——在没有任何外部程序的情况下提取内嵌文字层，输出 TXT、Markdown 或 JSON，并给出每页字符数，让你一眼看出哪些页没有文字层、需要真正的 OCR。批量模式可处理整个目录树并建立本地 SQLite 索引，支持关键词检索。图片文件可读出尺寸与 EXIF 元数据。全部在本机离线完成。若系统上存在 tesseract，或管理员配置了远程 OCR 接口，图片 OCR 可作为附加能力启用。"
+release_note = "1. 首次发布。"
+important = "PDF 文字提取完全离线、不需要任何外部程序。图片 OCR 需要 tesseract 或已配置的接口。"
+
+[zh-hk]
+name = "文件文字辨識"
+auth = "shh"
+descript = "把 TNAS 上的文件轉成可檢索文字。對 PDF 直接讀取檔案結構——交叉參照表、頁內容流、FlateDecode 解壓、文字顯示運算子與 ToUnicode 字元映射——在沒有任何外部程式的情況下提取內嵌文字層，輸出 TXT、Markdown 或 JSON，並給出每頁字元數，讓你一眼看出哪些頁沒有文字層、需要真正的 OCR。批次模式可處理整個目錄樹並建立本機 SQLite 索引，支援關鍵字檢索。圖片檔案可讀出尺寸與 EXIF 中繼資料。全部在本機離線完成。若系統上存在 tesseract，或管理員設定了遠端 OCR 介面，圖片 OCR 可作為附加能力啟用。"
+release_note = "1. 首次發佈。"
+important = "PDF 文字提取完全離線、不需要任何外部程式。圖片 OCR 需要 tesseract 或已設定的介面。"
+
+[en-us]
+name = "Document OCR"
+auth = "shh"
+descript = "Turns documents on your TNAS into searchable text. For PDFs it reads the structure directly - xref table, content streams, FlateDecode and ToUnicode maps - and extracts the embedded text layer with no external program, writing TXT, Markdown or JSON plus a per-page character count showing which pages have no text layer. Batch mode covers a folder tree and builds a searchable local index. Images yield dimensions and EXIF. Image OCR needs tesseract or a configured endpoint."
+release_note = "1. Initial release."
+important = "PDF text extraction works fully offline with no external program. Image OCR requires tesseract or a configured endpoint."
+
+[fr-fr]
+name = "Document OCR"
+auth = "shh"
+descript = "Turns documents on your TNAS into searchable text. For PDFs it reads the structure directly - xref table, content streams, FlateDecode and ToUnicode maps - and extracts the embedded text layer with no external program, writing TXT, Markdown or JSON plus a per-page character count showing which pages have no text layer. Batch mode covers a folder tree and builds a searchable local index. Images yield dimensions and EXIF. Image OCR needs tesseract or a configured endpoint."
+release_note = "1. Initial release."
+important = "PDF text extraction works fully offline with no external program. Image OCR requires tesseract or a configured endpoint."
+
+[de-de]
+name = "Document OCR"
+auth = "shh"
+descript = "Turns documents on your TNAS into searchable text. For PDFs it reads the structure directly - xref table, content streams, FlateDecode and ToUnicode maps - and extracts the embedded text layer with no external program, writing TXT, Markdown or JSON plus a per-page character count showing which pages have no text layer. Batch mode covers a folder tree and builds a searchable local index. Images yield dimensions and EXIF. Image OCR needs tesseract or a configured endpoint."
+release_note = "1. Initial release."
+important = "PDF text extraction works fully offline with no external program. Image OCR requires tesseract or a configured endpoint."
+
+[it-it]
+name = "Document OCR"
+auth = "shh"
+descript = "Turns documents on your TNAS into searchable text. For PDFs it reads the structure directly - xref table, content streams, FlateDecode and ToUnicode maps - and extracts the embedded text layer with no external program, writing TXT, Markdown or JSON plus a per-page character count showing which pages have no text layer. Batch mode covers a folder tree and builds a searchable local index. Images yield dimensions and EXIF. Image OCR needs tesseract or a configured endpoint."
+release_note = "1. Initial release."
+important = "PDF text extraction works fully offline with no external program. Image OCR requires tesseract or a configured endpoint."
+
+[es-es]
+name = "Document OCR"
+auth = "shh"
+descript = "Turns documents on your TNAS into searchable text. For PDFs it reads the structure directly - xref table, content streams, FlateDecode and ToUnicode maps - and extracts the embedded text layer with no external program, writing TXT, Markdown or JSON plus a per-page character count showing which pages have no text layer. Batch mode covers a folder tree and builds a searchable local index. Images yield dimensions and EXIF. Image OCR needs tesseract or a configured endpoint."
+release_note = "1. Initial release."
+important = "PDF text extraction works fully offline with no external program. Image OCR requires tesseract or a configured endpoint."
+
+[hu-hu]
+name = "Document OCR"
+auth = "shh"
+descript = "Turns documents on your TNAS into searchable text. For PDFs it reads the structure directly - xref table, content streams, FlateDecode and ToUnicode maps - and extracts the embedded text layer with no external program, writing TXT, Markdown or JSON plus a per-page character count showing which pages have no text layer. Batch mode covers a folder tree and builds a searchable local index. Images yield dimensions and EXIF. Image OCR needs tesseract or a configured endpoint."
+release_note = "1. Initial release."
+important = "PDF text extraction works fully offline with no external program. Image OCR requires tesseract or a configured endpoint."
+
+[ja-jp]
+name = "Document OCR"
+auth = "shh"
+descript = "Turns documents on your TNAS into searchable text. For PDFs it reads the structure directly - xref table, content streams, FlateDecode and ToUnicode maps - and extracts the embedded text layer with no external program, writing TXT, Markdown or JSON plus a per-page character count showing which pages have no text layer. Batch mode covers a folder tree and builds a searchable local index. Images yield dimensions and EXIF. Image OCR needs tesseract or a configured endpoint."
+release_note = "1. Initial release."
+important = "PDF text extraction works fully offline with no external program. Image OCR requires tesseract or a configured endpoint."
+
+[ko-kr]
+name = "Document OCR"
+auth = "shh"
+descript = "Turns documents on your TNAS into searchable text. For PDFs it reads the structure directly - xref table, content streams, FlateDecode and ToUnicode maps - and extracts the embedded text layer with no external program, writing TXT, Markdown or JSON plus a per-page character count showing which pages have no text layer. Batch mode covers a folder tree and builds a searchable local index. Images yield dimensions and EXIF. Image OCR needs tesseract or a configured endpoint."
+release_note = "1. Initial release."
+important = "PDF text extraction works fully offline with no external program. Image OCR requires tesseract or a configured endpoint."
+
+[pl-pl]
+name = "Document OCR"
+auth = "shh"
+descript = "Turns documents on your TNAS into searchable text. For PDFs it reads the structure directly - xref table, content streams, FlateDecode and ToUnicode maps - and extracts the embedded text layer with no external program, writing TXT, Markdown or JSON plus a per-page character count showing which pages have no text layer. Batch mode covers a folder tree and builds a searchable local index. Images yield dimensions and EXIF. Image OCR needs tesseract or a configured endpoint."
+release_note = "1. Initial release."
+important = "PDF text extraction works fully offline with no external program. Image OCR requires tesseract or a configured endpoint."
+
+[ru-ru]
+name = "Document OCR"
+auth = "shh"
+descript = "Turns documents on your TNAS into searchable text. For PDFs it reads the structure directly - xref table, content streams, FlateDecode and ToUnicode maps - and extracts the embedded text layer with no external program, writing TXT, Markdown or JSON plus a per-page character count showing which pages have no text layer. Batch mode covers a folder tree and builds a searchable local index. Images yield dimensions and EXIF. Image OCR needs tesseract or a configured endpoint."
+release_note = "1. Initial release."
+important = "PDF text extraction works fully offline with no external program. Image OCR requires tesseract or a configured endpoint."
+
+[tr-tr]
+name = "Document OCR"
+auth = "shh"
+descript = "Turns documents on your TNAS into searchable text. For PDFs it reads the structure directly - xref table, content streams, FlateDecode and ToUnicode maps - and extracts the embedded text layer with no external program, writing TXT, Markdown or JSON plus a per-page character count showing which pages have no text layer. Batch mode covers a folder tree and builds a searchable local index. Images yield dimensions and EXIF. Image OCR needs tesseract or a configured endpoint."
+release_note = "1. Initial release."
+important = "PDF text extraction works fully offline with no external program. Image OCR requires tesseract or a configured endpoint."
+
+[pt-pt]
+name = "Document OCR"
+auth = "shh"
+descript = "Turns documents on your TNAS into searchable text. For PDFs it reads the structure directly - xref table, content streams, FlateDecode and ToUnicode maps - and extracts the embedded text layer with no external program, writing TXT, Markdown or JSON plus a per-page character count showing which pages have no text layer. Batch mode covers a folder tree and builds a searchable local index. Images yield dimensions and EXIF. Image OCR needs tesseract or a configured endpoint."
+release_note = "1. Initial release."
+important = "PDF text extraction works fully offline with no external program. Image OCR requires tesseract or a configured endpoint."

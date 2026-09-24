@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-app-id="shh14-ocr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>文档文字识别</title>
+<!--
+  全部资源用**相对路径**引用，并带 ?v= 版本参数：
+    · 相对路径 —— 应用会被平台挂在 /<appid>/ 或 /v2/proxy/<appid>/ 下，
+      写死绝对路径会导致白屏（审核项 F7）。
+    · ?v= 版本参数 —— 升级后不会读到旧缓存（指引 8.8）。
+-->
+<link rel="stylesheet" href="./app.css?v=1.0.0">
+<style>
+  /* 本应用的品牌色（设计系统用 --app-accent 一个变量区分应用） */
+  :root { --app-accent: #0369A1; --app-accent-weak: #e6f2f9; }
+  @media (prefers-color-scheme: dark) { :root { --app-accent-weak: #0d2536; } }
+
+  .picker-row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+  .picker-row .path {
+    flex: 1; font-family: var(--mono); font-size: 12.5px;
+    background: var(--surface-2); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); padding: 7px 10px;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .picker-row .path.empty { color: var(--text-faint); }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--surface-2); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); padding: 4px 6px 4px 10px; font-size: 12.5px;
+    font-family: var(--mono); max-width: 100%;
+  }
+  .chip span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .chip button {
+    border: 0; background: none; cursor: pointer; color: var(--text-faint);
+    padding: 0 2px; line-height: 1;
+  }
+  .chip button:hover { color: var(--danger); }
+
+  /* 逐页字符数条：一眼看出哪些页没有文字层（设计文档 §12.3 的要点） */
+  .pagebars { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 6px; }
+  .pagebars .pg {
+    width: 14px; height: 20px; border-radius: 3px; cursor: default;
+    background: var(--surface-2); border: 1px solid var(--border);
+  }
+  .pagebars .pg.has { background: var(--app-accent); border-color: var(--app-accent); }
+  .pagebars .pg.none { background: repeating-linear-gradient(
+      45deg, var(--surface-2), var(--surface-2) 3px, var(--border) 3px, var(--border) 6px); }
+  .textview {
+    font-family: var(--mono); font-size: 12.5px; line-height: 1.65;
+    background: var(--surface-2); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); padding: 10px 12px;
+    max-height: 420px; overflow: auto; white-space: pre-wrap; word-break: break-word;
+  }
+  .textview mark { background: var(--app-accent-weak); color: inherit; padding: 0 1px; }
+  .kv { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px;
+        font-size: 12.5px; }
+  .kv .k { color: var(--text-faint); }
+  .kv .v { font-family: var(--mono); word-break: break-all; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- 顶栏 -->
+  <header class="topbar">
+    <div class="brand">
+      <svg viewBox="0 0 512 512" width="22" height="22" aria-hidden="true">
+        <rect x="32" y="32" width="448" height="448" rx="104" fill="#0369A1"/>
+        <text x="256" y="268" fill="#FFFFFF" font-family="Helvetica,Arial,sans-serif"
+              font-size="132" font-weight="700" text-anchor="middle"
+              dominant-baseline="central" letter-spacing="2">OCR</text>
+      </svg>
+      <span class="name">文档文字识别</span>
+    </div>
+    <span class="meta" id="engine-meta"></span>
+    <span class="spacer"></span>
+    <span class="meta" id="app-version"></span>
+  </header>
+
+  <!-- 左侧导航 -->
+  <nav class="nav" id="nav"></nav>
+
+  <!-- 核心工作区 -->
+  <main class="main" id="main"></main>
+
+  <!-- 底部任务栏 -->
+  <div class="taskbar" id="taskbar"></div>
+</div>
+
+<div id="toasts" class="toasts"></div>
+
+<script src="./icons.js?v=1.0.0"></script>
+<script src="./app.js?v=1.0.0"></script>
+<script src="./ocr.js?v=1.0.0"></script>
+</body>
+</html>

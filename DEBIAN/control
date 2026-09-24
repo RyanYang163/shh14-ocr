@@ -1,0 +1,9 @@
+Package: shh14-ocr
+Version: 1.0.0
+Architecture: amd64
+Section: utils
+Priority: optional
+Maintainer: shh <surpasshither@outlook.com>
+Depends: python3 (>= 3.10), systemd
+Description: Document OCR
+ Extract the text layer from PDF files and image metadata, in bulk, and build a local search index.
