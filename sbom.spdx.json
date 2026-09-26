@@ -2,8 +2,8 @@
   "spdxVersion": "SPDX-2.3",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "name": "shh14-ocr-1.0.0",
-  "documentNamespace": "https://github.com/RyanYang163/shh14-ocr/sbom/1.0.0",
+  "name": "shh14-ocr-1.0.1",
+  "documentNamespace": "https://github.com/RyanYang163/shh14-ocr/sbom/1.0.1",
   "creationInfo": {
     "created": "2026-09-23T00:00:00Z",
     "creators": [
@@ -15,7 +15,7 @@
     {
       "name": "shh14-ocr",
       "SPDXID": "SPDXRef-Package-shh14-ocr",
-      "versionInfo": "1.0.0",
+      "versionInfo": "1.0.1",
       "downloadLocation": "https://github.com/RyanYang163/shh14-ocr",
       "filesAnalyzed": true,
       "licenseConcluded": "MIT",
@@ -26,7 +26,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:github/RyanYang163/shh14-ocr@1.0.0"
+          "referenceLocator": "pkg:github/RyanYang163/shh14-ocr@1.0.1"
         }
       ]
     }
