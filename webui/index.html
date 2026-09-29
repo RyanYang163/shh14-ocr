@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>文档文字识别</title>
+<title data-i18n>文档文字识别</title>
 <!--
   全部资源用**相对路径**引用，并带 ?v= 版本参数：
     · 相对路径 —— 应用会被平台挂在 /<appid>/ 或 /v2/proxy/<appid>/ 下，
       写死绝对路径会导致白屏（审核项 F7）。
     · ?v= 版本参数 —— 升级后不会读到旧缓存（指引 8.8）。
 -->
-<link rel="stylesheet" href="./app.css?v=1.0.1">
+<link rel="stylesheet" href="./app.css?v=1.0.025">
 <style>
   /* 本应用的品牌色（设计系统用 --app-accent 一个变量区分应用） */
   :root { --app-accent: #0369A1; --app-accent-weak: #e6f2f9; }
@@ -72,7 +72,7 @@
               font-size="132" font-weight="700" text-anchor="middle"
               dominant-baseline="central" letter-spacing="2">OCR</text>
       </svg>
-      <span class="name">文档文字识别</span>
+      <span class="name" data-i18n>文档文字识别</span>
     </div>
     <span class="meta" id="engine-meta"></span>
     <span class="spacer"></span>
@@ -91,8 +91,12 @@
 
 <div id="toasts" class="toasts"></div>
 
-<script src="./icons.js?v=1.0.1"></script>
-<script src="./app.js?v=1.0.1"></script>
-<script src="./ocr.js?v=1.0.1"></script>
+<script src="./icons.js?v=1.0.025"></script>
+<!-- 多语言：i18n.js 必须在 app.js 之前 —— app.js 里到处调 T()，
+     而它的兜底守卫在加载时就判定一次，后到就退化成纯中文了 -->
+<script src="./i18n.js?v=1.0.025"></script>
+<script src="./ocr.i18n.js?v=1.0.025"></script>
+<script src="./app.js?v=1.0.025"></script>
+<script src="./ocr.js?v=1.0.025"></script>
 </body>
 </html>

@@ -25,7 +25,7 @@ from tnasapp import fsapi, imagedec, server as srv
 from . import engines, extract, pdfparse
 
 APP_ID = "shh14-ocr"
-APP_VERSION = "1.0.1"
+APP_VERSION = "1.0.025"
 TITLE = "Document OCR"
 
 #: 递归扫描的最大深度（防止误选根目录后无限下钻）
